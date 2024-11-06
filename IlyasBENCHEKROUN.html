@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilyas BENCHEKROUN - Resume</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.4rem !important;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.4;
+        }
+
+
+
+        .cv-container {
+            background-color: #fff;
+            padding: 40px;
+            font-size: 1.6em;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2c3e50;
+        }
+
+        .header .info {
+            max-width: 70%;
+
+        }
+
+        .header .info p {
+            font-size: 40px;
+            color: #2c3e50;
+        }
+
+        .header img {
+            width: 400px;
+            height: auto;
+            border-radius: 30%;
+
+        }
+
+
+        h1 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            color: #2c3e50;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+
+
+        .contact a {
+            color: #3498db;
+            transition: color 0.3s ease;
+        }
+
+        .contact p {
+            font-size: 42px;
+        }
+
+        .contact a:hover {
+            color: #2980b9;
+        }
+
+        .subtitle {
+            font-weight: bold;
+            margin: 30px 0 20px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .experience,
+        .journey {
+            margin-top: 25px;
+            padding-left: 20px;
+            border-left: 4px solid #3498db;
+            position: relative;
+        }
+
+        .experience::before,
+        .journey::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: #3498db;
+            border-radius: 50%;
+            left: -10px;
+            top: 5px;
+        }
+
+        .date {
+            font-weight: bold;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+
+        .details p {
+            margin: 10px 0;
+        }
+
+        .tools {
+
+            margin-top: 50px;
+
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+            list-style-type: none;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .title-section {
+            text-align: center;
+            margin: 40px 0;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .title-section h1 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .title-section p {
+            margin-top: 5px;
+            color: #34495e;
+            font-size: 50px;
+        }
+
+        .skills-section {
+            margin: 30px 0;
+        }
+
+        .skills-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .skills-section .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+
+        .skills-section .skills-list div {
+            background-color: #ecf0f1;
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: #34495e;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 43.6px;
+        }
+
+        .languages-section {
+            margin-top: 30px;
+        }
+
+        .languages-section p {
+            margin: 5px 0;
+        }
+
+        .interests {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .interests p {
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        #section-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #section-container #right-side {
+            width: 50%;
+        }
+
+        #section-container #left-side {
+            width: 50%;
+            padding-left: 20px;
+        }
+
+        #section-container #left-side .technologies-used {
+            display: inline;
+        }
+
+        #section-container #left-side li {
+            margin: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .cv-container {
+                padding: 20px;
+            }
+
+            .header {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .header .info {
+                max-width: 100%;
+            }
+
+            .header img {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+            }
+
+            .cv-container {
+                page-break-inside: avoid;
+            }
+        }
+
+
+        .location {
+            margin-bottom: 35px;
+            color: #2b2c2d;
+            font-style: italic;
+            font-size: 35px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #languages {
+            width: 50%;
+            text-align: center;
+
+        }
+
+
+        #interests {
+            width: 50%;
+            text-align: center;
+            padding-left: 4px;
+            border-left: 2px solid #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cv-container">
+        <div class="header">
+            <div class="info">
+                <div class="presentation">
+                    <h1>Ilyas BENCHEKROUN</h1>
+                    <p><b>State Software Engineering Master Student || Full Stack developper </b></p>
+                </div>
+                <div class="contact">
+                    <p>📍 Maininkitie 4 053 Espoo, Finland | Moroccan</p>
+                    <p>📞+358 404666447</p>
+                    <p>✉️ <a href="mailto:ilyas.benchekroun@aalto.fi">ilyas.benchekroun@aalto.fi</a></p>
+                    <p>🎂 26/06/2002 (22 years)</p>
+                    <p><b>Github : </b><a href="https://github.com/ilyas-ben">https://github.com/ilyas-ben</a></p>
+                </div>
+            </div>
+            <section id="photo">
+                <img src="data:image/jpeg;base64,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"
+                    alt="Ilyas Benchekroun">
+            </section>
+        </div>
+
+        <div class="title-section">
+            <h1>Master Thesis - End of Year Project Internship</h1>
+            <p>Available anytime starting from 02/2025. 6 months</p>
+        </div>
+
+        <section id="education">
+            <h1 class="subtitle">EDUCATION</h1>
+
+            <!-- Aalto -->
+            <div class="journey">
+                <div class="date">Aug 2024 - Dec 2024</div>
+                <div class="details">
+                    <h2>Aalto University</h2>
+                    <div class="location">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                            clip-rule="evenodd">
+                            <path
+                                d="M12 10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2m0-5c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3m-7 2.602c0-3.517 3.271-6.602 7-6.602s7 3.085 7 6.602c0 3.455-2.563 7.543-7 14.527-4.489-7.073-7-11.072-7-14.527m7-7.602c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602" />
+                        </svg> Espoo, Finland
+                    </div>
+                    <p>Exchange Program</p>
+                    <p><strong>Relevants Courses:</strong> Declarative Programming, Competitive algorithms, Devops,
+                        Service oriented architectures...</p>
+                </div>
+            </div>
+
+            <!-- UIR -->
+            <div class="journey">
+                <div class="date">2020 - 2025</div>
+                <div class="details">
+                    <h2>International University of Rabat (UIR)</h2>
+                    <div class="location">
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                            clip-rule="evenodd">
+                            <path
+                                d="M12 10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2m0-5c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3m-7 2.602c0-3.517 3.271-6.602 7-6.602s7 3.085 7 6.602c0 3.455-2.563 7.543-7 14.527-4.489-7.073-7-11.072-7-14.527m7-7.602c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602" />
+                        </svg> Rabat, Morocco
+                    </div>
+                    <p><b>State Master in Software Engineering</b></p>
+                    <b>Relevants courses :</b> Design patterns, SCRUM, AGILE, distributed algorithms, Algorithmic and
+                    Advanced Data Structures, Software project management(GANTT, PERTT...)
+                </div>
+            </div>
+
+            <!-- BAC -->
+            <div class="journey">
+                <div class="date">2020</div>
+                <div class="details">
+                    <h2>Paul Valéry High School</h2>
+                    <div class="location"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                            fill-rule="evenodd" clip-rule="evenodd">
+                            <path
+                                d="M12 10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2m0-5c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3m-7 2.602c0-3.517 3.271-6.602 7-6.602s7 3.085 7 6.602c0 3.455-2.563 7.543-7 14.527-4.489-7.073-7-11.072-7-14.527m7-7.602c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602" />
+                        </svg> Rabat, Morocco</div>
+                    <p><b>High School Degree - Experimental Sciences</b></p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="experiences">
+            <h1 class="subtitle">EXPERIENCES</h1>
+            <div id="section-container">
+                <div id="right-side">
+
+                    <div class="experience">
+                        <div class="date">June 2024 – August 2024</div>
+                        <div class="details">
+                            <h2>Symfony Developer - Internship</h2>
+                            <div class="location">
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                    clip-rule="evenodd">
+                                    <path
+                                        d="M12 10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2m0-5c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3m-7 2.602c0-3.517 3.271-6.602 7-6.602s7 3.085 7 6.602c0 3.455-2.563 7.543-7 14.527-4.489-7.073-7-11.072-7-14.527m7-7.602c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602" />
+                                </svg> Proxisoft, Rabat, Morocco
+                            </div>
+                            <p>Developed back end for comprehensive CRM with the following functionalities:</p>
+                            <ul>
+                                <li>Stock Management</li>
+                                <li>Warehouse Management</li>
+                                <li>Stock Movement Management</li>
+                                <li>Third Party Management</li>
+                                <li>User Management</li>
+                            </ul>
+                            <p class="tools"><strong>Tools and Technologies:</strong> Symfony, GitHub, UML.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <div class="date">June 2023 – August 2023</div>
+                        <div class="details">
+                            <h2>Spring Boot Developer - Internship</h2>
+                            <div class="location"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                                    fill-rule="evenodd" clip-rule="evenodd">
+                                    <path
+                                        d="M12 10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2m0-5c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3m-7 2.602c0-3.517 3.271-6.602 7-6.602s7 3.085 7 6.602c0 3.455-2.563 7.543-7 14.527-4.489-7.073-7-11.072-7-14.527m7-7.602c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602" />
+                                </svg> Soft & Soft engineering, Rabat, Morocco</div>
+                            <ul>
+                                <li>Developed backend for room management system, including:</li>
+                                <ul>
+                                    <li>Secure login page with JWT authentication</li>
+                                    <li>Advanced search criteria using HQL</li>
+                                </ul>
+                                <li>Implemented backend for police missions management</li>
+                            </ul>
+                            <p class="tools"><strong>Tools and Technologies:</strong> Spring Boot, GitLab, Spring
+                                Security,
+                                Hibernate.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <div class="date">June 2022 – July 2022</div>
+                        <div class="details">
+                            <h2>PHP Developer - Internship</h2>
+                            <div class="location">
+                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                    clip-rule="evenodd">
+                                    <path
+                                        d="M12 10c-1.104 0-2-.896-2-2s.896-2 2-2 2 .896 2 2-.896 2-2 2m0-5c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3m-7 2.602c0-3.517 3.271-6.602 7-6.602s7 3.085 7 6.602c0 3.455-2.563 7.543-7 14.527-4.489-7.073-7-11.072-7-14.527m7-7.602c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602" />
+                                </svg>
+                                National Office of Electricity and Drinking Water (ONEE - Branche Eau), Rabat, Morocco
+                            </div>
+                            <ul>
+                                <li>Developed an intern management system, including:</li>
+                                <ul>
+                                    <li>Intern registration and tracking their attendence</li>
+                                    <li>Access control for assigned projects</li>
+                                    <li>Intership applications management</li>
+                                </ul>
+
+                            </ul>
+                            <p class="tools"><strong>Tools and Technologies:</strong> PHP, MySQL</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="left-side" style=" border-left: 2px solid #7f8c8d;">
+                    <h1 class="subtitle" style="border-bottom: 0px; text-align: left;">Projects : </h1>
+
+                    <ul>
+                        <li>Academic Projects:
+                            <ul>
+                                <li><b>Culinary Receipts Social Media</b>
+                                    <ul class="technologies-used">
+                                        <li>Backend: Hibernate, Struts2</li>
+                                        <li>Frontend: HTML, CSS, JavaScript</li>
+                                        <li>Database: MySQL</li>
+                                        <li><a href="">Source code</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><b>Geekstore: E-commerce Website</b>
+                                    <ul class="technologies-used">
+                                        <li>Backend: Spring Boot, Spring security</li>
+                                        <li>Authentication: JWT</li>
+                                        <li>Frontend: React</li>
+                                        <li>Database: MySQL</li>
+                                        <li><a href="">Source code</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li><br>
+                        <li>Internships projects :</li>
+                        <ul>
+                            <li><b>CRM</b>
+                                <ul class="technologies-used">
+                                    <li>Frontend: HTML, CSS, JavaScript</li>
+                                    <li>Backend: Symfony</li>
+                                    <li>Authentication: Symfony's authentificator </li>
+                                    
+                                    <li>Database: MySQL</li>
+                                    <li><a href="">Source code</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h1 class="subtitle">SKILLS</h1>
+            <div class="skills-section">
+                <div class="skills-list">
+                    <div>HTML5</div>
+                    <div>CSS</div>
+                    <div>Javascript</div>
+                    <div>Java</div>
+                    <div>React</div>
+                    <!-- <div>Spring Boot </div>
+                    <div>Hibernate</div>
+                    <div>Struts2</div> -->
+                    <!-- <div>JUnit</div>
+                    <div>Mockito</div> -->
+                    
+                    <!-- <div>PHP</div> -->
+                   <!--  <div>Symfony 7.1</div> -->
+                    <div>Python</div>
+                    <div>MySQL</div>
+                    <div>PostgreSQL</div>
+                    <div>C++</div>
+                    <div>Git</div>
+                    <!-- <div>UML</div>
+                    <div>SonarQube</div> -->
+
+                    <!-- <div>Node JS</div>
+                    <div>Git</div>
+                    
+                    
+                    <div>GANTT</div>
+                    <div>PERT</div> -->
+                </div>
+
+                <!--  <h2>Frameworks :</h2>
+                <div class="skills-list">
+                    <div>Spring Boot </div>
+                    <div>Spring Security</div>
+                    <div>Hibernate</div>
+                    <div>Struts2</div>
+                    <div>JUnit</div>
+                    <div>Mockito</div>
+                    <div>React</div>
+                    <div>Angular</div>
+                    <div>Symfony</div>
+                </div>
+
+                <h2>Databases :</h2>
+                <div class="skills-list">
+                    <div>MySQL</div>
+                    <div>PostgreSQL</div>
+                </div>
+
+                <h2>Tools :</h2>
+                <div class="skills-list">
+                    <div>Node JS</div>
+                    <div>Git</div>
+                    <div>JHipster (for Spring)</div>
+                    <div>SonarQube</div>
+                    <div>Linux</div>
+                </div>
+
+                <h2>Software Conception :</h2>
+                <div class="skills-list">
+                    
+                </div> -->
+        </section>
+
+        <div class="flex-container">
+            <div id="languages">
+                <h2 class="subtitle" style="border-bottom: none;">LANGUAGES</h2>
+                <b>English</b> - Fluent | <b>French</b> - Mother tongue | <b>Arabic</b> - mother tongue | <b>Spanish</b>
+                - Basics | <b>Finnish</b> - Basics | <b>German</b> - Basics
+            </div>
+
+            <div id="interests">
+                <div class="interests">
+                    <h2 class="subtitle" style="border-bottom: none;">INTERESTS</h2>
+                    Coding, Sport, Food, Travel, Cars, BasketBall, Cardio
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
